@@ -7,7 +7,10 @@
 //  IMPORTANT: Use addEventListener() to wire your
 //  buttons — do NOT add onclick in the HTML.
 // ============================================
-
+document.getElementById("btnShout").addEventListener('click',function(){
+    let value = document.getElementsById("shoutText").value
+    document.getElementById("outshout").innerHTML = value.toUpperCase()+"!";
+})
 
 // ============================================
 //  WARM-UP: Shout It!
@@ -54,7 +57,11 @@
 //      Use document.getElementsByName("cb") to get all
 //      topping checkboxes. Loop through and count how
 //      many are .checked. Multiply count by 0.50.
-
+let price = 0;
+const toppings = document.getElementsByName('cb');
+    for(let i = 0; i< toppings.length; i++){
+        price+=0.5;
+}
 //   c) Get the service fee:
 //      Use document.getElementById("serviceSelect").value
 //      to get the selected option value ("dinein", "takeout",
